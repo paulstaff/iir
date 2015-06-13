@@ -1,0 +1,189 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#content a {
+    color: #32ace1;
+    text-decoration: none;
+}
+
+#content a:hover {
+    color: #999999;
+}
+
+.navBack {
+    width: 100vw;
+    background: #32ace1;
+}
+
+.navBar {
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 25px auto;
+}
+
+.navBar .navTitle {
+    font-size: 22px;
+    line-height: 20px;
+    padding: 15px 0;
+    font-style: italic;
+}
+
+.navBar .navItem {
+    padding: 15px 25px;
+    line-height: 20px;
+    height: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: 0.2s;
+}
+
+.navBar .navItem:hover {
+    background: #1e98cd;
+}
+
+.list {
+
+}
+
+.list .item {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    max-width: 800px;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0 auto -1px auto;
+}
+
+.list .item:first-of-type {
+    border-radius: 2px 2px 0 0;
+}
+
+.list .item:last-of-type {
+    border-radius: 0 0 2px 2px;
+}
+
+.list .item.details {
+    display: none;
+}
+
+.list .item.details .info {
+    margin: 0 0 0 25px;
+}
+
+.list .item.details .info strong {
+    font-weight: 700;
+}
+
+.list .item .status {
+    width: 55px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 2px;
+}
+
+.list .item .status.good {
+    background: #2bbb87;
+    color: #FFFFFF;
+}
+
+.list .item .status.ok {
+    background: #e7b632;
+    color: #FFFFFF;
+}
+
+.list .item .status.bad {
+    background: #d93544;
+    color: #FFFFFF;
+}
+
+.list .item .btnAction {
+    padding: 8px 20px;
+    margin: 0 5px;
+}
+
+.list .item .btnAction:first-of-type {
+    margin: 0 5px 0 0;
+}
+
+.list .item .btnAction:last-of-type {
+    margin:  0 0 0 5px;
+}
+
+.list .item .info {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.list .item .info .title {
+    font-size: 20px;
+}
+
+.list .item .info .uri {
+    font-size: 12px;
+    color: #999999;
+}
+
+.list .item .info .uri strong {
+    font-weight: 700;
+}
+
+.btn {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    cursor: pointer;
+    transition-property: border, color;
+    transition-duration: 0.2s;
+    text-align: center;
+}
+
+.btn:hover {
+    border: 1px solid #32ace1;
+    color: #32ace1;
+}
+
+
+.btnAdd {
+    padding: 15px 25px;
+    margin: 25px auto;
+    max-width: 200px;
+}
+
+.modalBody {
+    padding: 0 15px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.modalFooter {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #DDDDDD;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.modalBtn {
+    flex-grow: 1;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.modalBtn:hover {
+    background: #EFEFEF;
+}
+

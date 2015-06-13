@@ -1,0 +1,117 @@
+/****************************************************************************
+
+  Form Stylesheet
+  ---------------
+
+  Author: Paul Staff
+  Date: 2015.06.01
+  Version: 0.9.0
+
+  Description: This stylesheet includes all formatting information for forms
+  and form fields for the Matrix App.
+
+****************************************************************************/
+
+
+/*** Form Row - flex wrapper for form items ***/
+
+.formRow {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+}
+
+.formRow .formItem {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.formRow .formItem:first-of-type {
+    padding: 0 10px 0 0 !important;
+}
+
+.formRow .formItem:last-of-type {
+    padding: 0 0 0 10px !important;
+}
+
+.formRow .formItem:only-of-type {
+    padding: 0 !important;
+}
+
+
+/*** Form Item - container for inputs, labels, etc. ***/
+
+.formList {
+    width: 100%;
+}
+
+.formItem label,
+.formList label {
+    font-weight: 400;
+    display: block;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.formItem input,
+.formItem textarea,
+.formItem select,
+.formItem .psDropdown .input {
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    text-align: left;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.formItem input:focus,
+.formItem textarea:focus {
+    border: 1px solid rgba(59, 130, 183, 0.5);
+    box-shadow: 0 0 5px rgba(59, 130, 183, 0.5);
+}
+
+.formItem .psDropdown {
+    cursor: pointer;
+    position: relative;
+}
+
+.formItem .psDropdown ul {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-top: none;
+    z-index: 10002;
+    list-style-type: none;
+    box-shadow: 0 4px 33px rgba(0,0,0,.22);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.formItem .psDropdown ul li {
+    padding: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #333333;
+}
+
+.formItem .psDropdown ul li:hover {
+    background: #32ace1;
+    color: #FFFFFF;
+}
+
+.formItem .formWarning {
+    color: #d61919;
+    margin: 5px 0;
+    display: none;
+}
