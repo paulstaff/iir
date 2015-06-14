@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Bad Script';
+    font-style: normal;
+    font-weight: 400;
+    src:    url('fonts/Bad Script/Bad-Script.woff2') format('woff2'),
+            url('fonts/Bad Script/Bad-Script.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Genericons';
+    src: url('fonts/Genericons/Genericons.woff') format('woff');
+}

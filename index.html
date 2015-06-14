@@ -4,7 +4,6 @@
     <title>Is It Running?</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/mainStyle.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/formStyle.css" />
     <link rel="stylesheet" type="text/css" href="assets/lib/psModal/psModal.css" />
     <link rel="stylesheet" type="text/css" href="assets/lib/psDropdown/psDropdown.css" />
 
@@ -18,14 +17,15 @@
 
 <div id="content">
 
-    <div class="navBack">
-        <div class="navBar">
-            <div class="navTitle">Is It Running?</div>
-            <div class="navItem">Settings</div>
-        </div>
+    <div class="heroTitle">Is It Running?</div>
+
+    <div class="optionsMenu">
+        <div class="btn btnOptions" onclick="toggleAllDetails()">Toggle Details</div>
+        <div class="btn btnOptions">Settings</div>
     </div>
 
     <div class="list" id="list">
+        <div class="text">Loading...</div>
     </div>
 
     <div class="btn btnAdd" onclick="addItem()">Add Item</div>

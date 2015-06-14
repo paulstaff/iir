@@ -183,9 +183,9 @@ function testItems() {
                         '       <div class="title">' + itemList[key].title + '</div>' +
                         '       <div class="uri"><strong>' + itemList[key].type + '</strong> <a href="' + itemList[key].uri + '">' + itemList[key].uri + '</a></div>' +
                         '   </div>' +
-                        '   <div class="btn btnAction" onclick="toggleDetails(\'' + key + '\')">Details</div>' +
-                        '   <div class="btn btnAction" onclick="editItem(\'' + key + '\', \'' + itemList[key].title + '\', \'' + itemList[key].type + '\', \'' + itemList[key].uri + '\')">Edit</div>' +
-                        '   <div class="btn btnAction" onclick="removeItem(\'' + key + '\')">Remove</div>' +
+                        '   <div class="btn btnAction" onclick="toggleDetails(\'' + key + '\')">&#xf412</div>' +
+                        '   <div class="btn btnAction" onclick="editItem(\'' + key + '\', \'' + itemList[key].title + '\', \'' + itemList[key].type + '\', \'' + itemList[key].uri + '\')">&#xf411</div>' +
+                        '   <div class="btn btnAction" onclick="removeItem(\'' + key + '\')">&#xf407</div>' +
                         '</div>';
 
             list.append(item);
@@ -212,7 +212,19 @@ function testItems() {
 
             list.append(details);
         }
+
+        if(itemList.length == 0) {
+
+            var empty = '<div class="text">No items to test =(.</div><div class="text"> Why don\'t you <a onclick="addItem()">Add One</a>?</div>';
+            list.append(empty);
+        }
     };
+
+    var loading = '<div class="text">Loading...</div>';
+    var list = $("#list");
+
+    list.empty();
+    list.append(loading);
 
     apiRequest(request, success);
 }
@@ -223,4 +235,41 @@ function apiRequest(request, success) {
 
 function toggleDetails(itemId) {
     $("#" + itemId + "-details").toggle();
+}
+
+function toggleAllDetails() {
+    $(".item.details").toggle();
+}
+
+function updateSettings() {
+
+    var title = "Settings";
+
+    var content =   '<div class="modalBody">' +
+                    '   <div class="formRow">' +
+                    '       <div class="formItem">' +
+                    '           <label>Password</label>' +
+                    '           <input type="text" id="pass">' +
+                    '           <div class="formWarning" id="passWarning">Please enter a Password</div> ' +
+                    '       </div>' +
+                    '   </div>' +
+                    '   <div class="formRow">' +
+                    '       <div class="formItem">' +
+                    '           <label>Confirm Password</label>' +
+                    '           <input type="text" id="passConfirm">' +
+                    '           <div class="formWarning" id="passConfirmWarning">Passwords do not match</div> ' +
+                    '       </div>' +
+                    '   </div>' +
+                    '</div>' +
+                    '<div class="modalFooter">' +
+                    '   <div class="modalBtn" onclick="processItem(\'addItem\')">Add Item</div>' +
+                    '   <div class="modalBtn" onclick="psModal.close()">Cancel</div>' +
+                    '</div>';
+
+    var options = {
+        width: 600
+    };
+
+    psModal.open(title, content, options);
+
 }
